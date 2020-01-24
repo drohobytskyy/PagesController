@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PagesController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zQm-BB-NH7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="599" id="zr6-lx-GTX"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gV6-uB-neK">
+                                    <size key="itemSize" width="354" height="516"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pages_cell_identifier" id="DL7-jw-7GX" customClass="PageCollectionViewCell" customModule="PagesController" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="41.5" width="354" height="516"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="516"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="833-v1-IPi">
+                                                    <rect key="frame" x="0.0" y="395" width="354" height="56.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNE-zm-hZ6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="36"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIb-Ui-vS0">
+                                                            <rect key="frame" x="0.0" y="36" width="354" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xOs-fa-dbG">
+                                                    <rect key="frame" x="102" y="203" width="150" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="0Tc-xy-kWB"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="833-v1-IPi" firstAttribute="top" secondItem="DL7-jw-7GX" secondAttribute="top" constant="395" id="0eh-0B-4T1"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xOs-fa-dbG" secondAttribute="trailing" constant="94" id="1RP-4f-fIz"/>
+                                            <constraint firstItem="xOs-fa-dbG" firstAttribute="top" secondItem="DL7-jw-7GX" secondAttribute="topMargin" constant="175" id="4ue-5T-mjr"/>
+                                            <constraint firstAttribute="trailing" secondItem="833-v1-IPi" secondAttribute="trailing" id="JAO-ln-Wvx"/>
+                                            <constraint firstItem="xOs-fa-dbG" firstAttribute="leading" secondItem="DL7-jw-7GX" secondAttribute="leadingMargin" constant="94" id="YyW-cf-0cu"/>
+                                            <constraint firstItem="833-v1-IPi" firstAttribute="leading" secondItem="DL7-jw-7GX" secondAttribute="leading" id="heb-wY-rYy"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="containerStackView" destination="833-v1-IPi" id="yUk-yc-GHD"/>
+                                            <outlet property="descriptionLabel" destination="OIb-Ui-vS0" id="5Zy-fd-Zsb"/>
+                                            <outlet property="imageView" destination="xOs-fa-dbG" id="pfl-jp-3zP"/>
+                                            <outlet property="titleLabel" destination="RNE-zm-hZ6" id="Joq-yo-sYE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="W6L-bK-IHh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xWe-zC-PPI"/>
+                                </connections>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="121" translatesAutoresizingMaskIntoConstraints="NO" id="ZKo-sb-YMg">
+                                <rect key="frame" x="15" y="610" width="345" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiO-J7-FwP">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="37"/>
+                                        <state key="normal" title="Prev">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="prevButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JU2-a2-E6A"/>
+                                        </connections>
+                                    </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RTW-pR-CAw">
+                                        <rect key="frame" x="153" y="0.0" width="39" height="37"/>
+                                        <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.1455506043" green="0.54816749629999995" blue="0.78866592639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrk-Z6-Z0m">
+                                        <rect key="frame" x="313" y="0.0" width="32" height="37"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5o-KM-wUo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RTW-pR-CAw" firstAttribute="centerX" secondItem="ZKo-sb-YMg" secondAttribute="centerX" id="mvg-CZ-uxA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zQm-BB-NH7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EPy-9Q-9o6"/>
+                            <constraint firstItem="zQm-BB-NH7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GDQ-ju-vu3"/>
+                            <constraint firstAttribute="bottom" secondItem="ZKo-sb-YMg" secondAttribute="bottom" constant="20" symbolic="YES" id="KSP-WN-Qz3"/>
+                            <constraint firstAttribute="trailing" secondItem="zQm-BB-NH7" secondAttribute="trailing" id="Tjt-Rr-nzW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZKo-sb-YMg" secondAttribute="bottom" constant="20" id="VWh-QB-ibP"/>
+                            <constraint firstItem="zQm-BB-NH7" firstAttribute="centerX" secondItem="ZKo-sb-YMg" secondAttribute="centerX" id="eIG-YR-OvK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="controlsContainerStackView" destination="ZKo-sb-YMg" id="rPi-Fb-sup"/>
+                        <outlet property="nextButton" destination="zrk-Z6-Z0m" id="9o2-1f-kb8"/>
+                        <outlet property="pageControl" destination="RTW-pR-CAw" id="SVE-eL-RuX"/>
+                        <outlet property="pagesCollectionView" destination="zQm-BB-NH7" id="Cgu-aQ-Vkg"/>
+                        <outlet property="prevButton" destination="jiO-J7-FwP" id="d3f-Bd-N1Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
